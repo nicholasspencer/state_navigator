@@ -1,0 +1,26 @@
+name: state_navigator
+description: "A playground for state based navigation"
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  state_notifier: ^1.0.0
+  cupertino_icons: ^1.0.2
+  freezed_annotation: ^2.4.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+  build_runner: ^2.4.6
+  freezed: ^2.4.5
+
+flutter:
+  uses-material-design: true

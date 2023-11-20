@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ErrorScreen extends StatelessWidget {
+import '../router.dart';
+
+class ErrorScreen extends StatelessScreen<void> {
   const ErrorScreen({
     required this.error,
-    required this.onPressed,
+    required super.onResult,
     super.key,
   });
 
   final Object? error;
-
-  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class ErrorScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextButton(
-                onPressed: onPressed,
+                onPressed: () => onResult(const ScreenResult<void>.back()),
                 child: const Text('Retry'),
               ),
             ],

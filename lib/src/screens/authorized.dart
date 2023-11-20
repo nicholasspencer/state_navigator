@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
 
-class AuthorizedScreen extends StatelessWidget {
+import '../router.dart';
+
+class AuthorizedScreen extends StatelessScreen<void> {
   const AuthorizedScreen({
-    required this.onPressed,
+    required super.onResult,
     super.key,
   });
-
-  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Welcome back!'),
-        leading: IconButton(
-          onPressed: onPressed,
-          icon: const Icon(Icons.logout),
-        ),
       ),
       body: Column(
         children: [
@@ -24,7 +20,7 @@ class AuthorizedScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextButton(
-                onPressed: onPressed,
+                onPressed: () => onResult(const ScreenResult<void>.back()),
                 child: const Text('logout'),
               ),
             ],

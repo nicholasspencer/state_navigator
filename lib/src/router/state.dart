@@ -90,3 +90,38 @@ sealed class AppState {
 
   const factory AppState.outOfDate() = OutOfDateAppState;
 }
+
+abstract interface class NavigationResult<T> {
+  T? get value;
+}
+
+abstract interface class BackNavigationResult<T> extends NavigationResult<T> {
+  bool get explicit;
+}
+
+abstract interface class ErrorNavigationResult<T> extends NavigationResult<T> {
+  Object get error;
+
+  StackTrace? get stackTrace;
+}
+
+@freezed
+class ScreenResult<T> with _$ScreenResult<T> {
+  @Implements.fromString('NavigationResult<T>')
+  const factory ScreenResult({T? value}) = CompletedScreenResult<T>;
+
+  @Implements.fromString('NavigationResult<T>')
+  @Implements.fromString('BackNavigationResult<T>')
+  const factory ScreenResult.back({
+    T? value,
+    @Default(false) bool explicit,
+  }) = BackScreenResult<T>;
+
+  @Implements.fromString('NavigationResult<T>')
+  @Implements.fromString('ErrorNavigationResult<T>')
+  const factory ScreenResult.error({
+    required Object error,
+    T? value,
+    StackTrace? stackTrace,
+  }) = ErrorScreenResult<T>;
+}

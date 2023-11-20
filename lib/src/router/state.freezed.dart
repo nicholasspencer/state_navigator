@@ -726,3 +726,570 @@ abstract class OutOfDateAppState extends AppState {
   const factory OutOfDateAppState() = _$OutOfDateAppStateImpl;
   const OutOfDateAppState._() : super._();
 }
+
+/// @nodoc
+mixin _$ScreenResult<T> {
+  T? get value => throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(T? value) $default, {
+    required TResult Function(T? value, bool explicit) back,
+    required TResult Function(Object error, T? value, StackTrace? stackTrace)
+        error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(T? value)? $default, {
+    TResult? Function(T? value, bool explicit)? back,
+    TResult? Function(Object error, T? value, StackTrace? stackTrace)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(T? value)? $default, {
+    TResult Function(T? value, bool explicit)? back,
+    TResult Function(Object error, T? value, StackTrace? stackTrace)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(CompletedScreenResult<T> value) $default, {
+    required TResult Function(BackScreenResult<T> value) back,
+    required TResult Function(ErrorScreenResult<T> value) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(CompletedScreenResult<T> value)? $default, {
+    TResult? Function(BackScreenResult<T> value)? back,
+    TResult? Function(ErrorScreenResult<T> value)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(CompletedScreenResult<T> value)? $default, {
+    TResult Function(BackScreenResult<T> value)? back,
+    TResult Function(ErrorScreenResult<T> value)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $ScreenResultCopyWith<T, ScreenResult<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ScreenResultCopyWith<T, $Res> {
+  factory $ScreenResultCopyWith(
+          ScreenResult<T> value, $Res Function(ScreenResult<T>) then) =
+      _$ScreenResultCopyWithImpl<T, $Res, ScreenResult<T>>;
+  @useResult
+  $Res call({T? value});
+}
+
+/// @nodoc
+class _$ScreenResultCopyWithImpl<T, $Res, $Val extends ScreenResult<T>>
+    implements $ScreenResultCopyWith<T, $Res> {
+  _$ScreenResultCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = freezed,
+  }) {
+    return _then(_value.copyWith(
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as T?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$CompletedScreenResultImplCopyWith<T, $Res>
+    implements $ScreenResultCopyWith<T, $Res> {
+  factory _$$CompletedScreenResultImplCopyWith(
+          _$CompletedScreenResultImpl<T> value,
+          $Res Function(_$CompletedScreenResultImpl<T>) then) =
+      __$$CompletedScreenResultImplCopyWithImpl<T, $Res>;
+  @override
+  @useResult
+  $Res call({T? value});
+}
+
+/// @nodoc
+class __$$CompletedScreenResultImplCopyWithImpl<T, $Res>
+    extends _$ScreenResultCopyWithImpl<T, $Res, _$CompletedScreenResultImpl<T>>
+    implements _$$CompletedScreenResultImplCopyWith<T, $Res> {
+  __$$CompletedScreenResultImplCopyWithImpl(
+      _$CompletedScreenResultImpl<T> _value,
+      $Res Function(_$CompletedScreenResultImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = freezed,
+  }) {
+    return _then(_$CompletedScreenResultImpl<T>(
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as T?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CompletedScreenResultImpl<T> implements CompletedScreenResult<T> {
+  const _$CompletedScreenResultImpl({this.value});
+
+  @override
+  final T? value;
+
+  @override
+  String toString() {
+    return 'ScreenResult<$T>(value: $value)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CompletedScreenResultImpl<T> &&
+            const DeepCollectionEquality().equals(other.value, value));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CompletedScreenResultImplCopyWith<T, _$CompletedScreenResultImpl<T>>
+      get copyWith => __$$CompletedScreenResultImplCopyWithImpl<T,
+          _$CompletedScreenResultImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(T? value) $default, {
+    required TResult Function(T? value, bool explicit) back,
+    required TResult Function(Object error, T? value, StackTrace? stackTrace)
+        error,
+  }) {
+    return $default(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(T? value)? $default, {
+    TResult? Function(T? value, bool explicit)? back,
+    TResult? Function(Object error, T? value, StackTrace? stackTrace)? error,
+  }) {
+    return $default?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(T? value)? $default, {
+    TResult Function(T? value, bool explicit)? back,
+    TResult Function(Object error, T? value, StackTrace? stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if ($default != null) {
+      return $default(value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(CompletedScreenResult<T> value) $default, {
+    required TResult Function(BackScreenResult<T> value) back,
+    required TResult Function(ErrorScreenResult<T> value) error,
+  }) {
+    return $default(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(CompletedScreenResult<T> value)? $default, {
+    TResult? Function(BackScreenResult<T> value)? back,
+    TResult? Function(ErrorScreenResult<T> value)? error,
+  }) {
+    return $default?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(CompletedScreenResult<T> value)? $default, {
+    TResult Function(BackScreenResult<T> value)? back,
+    TResult Function(ErrorScreenResult<T> value)? error,
+    required TResult orElse(),
+  }) {
+    if ($default != null) {
+      return $default(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CompletedScreenResult<T>
+    implements ScreenResult<T>, NavigationResult<T> {
+  const factory CompletedScreenResult({final T? value}) =
+      _$CompletedScreenResultImpl<T>;
+
+  @override
+  T? get value;
+  @override
+  @JsonKey(ignore: true)
+  _$$CompletedScreenResultImplCopyWith<T, _$CompletedScreenResultImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$BackScreenResultImplCopyWith<T, $Res>
+    implements $ScreenResultCopyWith<T, $Res> {
+  factory _$$BackScreenResultImplCopyWith(_$BackScreenResultImpl<T> value,
+          $Res Function(_$BackScreenResultImpl<T>) then) =
+      __$$BackScreenResultImplCopyWithImpl<T, $Res>;
+  @override
+  @useResult
+  $Res call({T? value, bool explicit});
+}
+
+/// @nodoc
+class __$$BackScreenResultImplCopyWithImpl<T, $Res>
+    extends _$ScreenResultCopyWithImpl<T, $Res, _$BackScreenResultImpl<T>>
+    implements _$$BackScreenResultImplCopyWith<T, $Res> {
+  __$$BackScreenResultImplCopyWithImpl(_$BackScreenResultImpl<T> _value,
+      $Res Function(_$BackScreenResultImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = freezed,
+    Object? explicit = null,
+  }) {
+    return _then(_$BackScreenResultImpl<T>(
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as T?,
+      explicit: null == explicit
+          ? _value.explicit
+          : explicit // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$BackScreenResultImpl<T> implements BackScreenResult<T> {
+  const _$BackScreenResultImpl({this.value, this.explicit = false});
+
+  @override
+  final T? value;
+  @override
+  @JsonKey()
+  final bool explicit;
+
+  @override
+  String toString() {
+    return 'ScreenResult<$T>.back(value: $value, explicit: $explicit)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BackScreenResultImpl<T> &&
+            const DeepCollectionEquality().equals(other.value, value) &&
+            (identical(other.explicit, explicit) ||
+                other.explicit == explicit));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(value), explicit);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$BackScreenResultImplCopyWith<T, _$BackScreenResultImpl<T>> get copyWith =>
+      __$$BackScreenResultImplCopyWithImpl<T, _$BackScreenResultImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(T? value) $default, {
+    required TResult Function(T? value, bool explicit) back,
+    required TResult Function(Object error, T? value, StackTrace? stackTrace)
+        error,
+  }) {
+    return back(value, explicit);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(T? value)? $default, {
+    TResult? Function(T? value, bool explicit)? back,
+    TResult? Function(Object error, T? value, StackTrace? stackTrace)? error,
+  }) {
+    return back?.call(value, explicit);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(T? value)? $default, {
+    TResult Function(T? value, bool explicit)? back,
+    TResult Function(Object error, T? value, StackTrace? stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (back != null) {
+      return back(value, explicit);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(CompletedScreenResult<T> value) $default, {
+    required TResult Function(BackScreenResult<T> value) back,
+    required TResult Function(ErrorScreenResult<T> value) error,
+  }) {
+    return back(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(CompletedScreenResult<T> value)? $default, {
+    TResult? Function(BackScreenResult<T> value)? back,
+    TResult? Function(ErrorScreenResult<T> value)? error,
+  }) {
+    return back?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(CompletedScreenResult<T> value)? $default, {
+    TResult Function(BackScreenResult<T> value)? back,
+    TResult Function(ErrorScreenResult<T> value)? error,
+    required TResult orElse(),
+  }) {
+    if (back != null) {
+      return back(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class BackScreenResult<T>
+    implements ScreenResult<T>, NavigationResult<T>, BackNavigationResult<T> {
+  const factory BackScreenResult({final T? value, final bool explicit}) =
+      _$BackScreenResultImpl<T>;
+
+  @override
+  T? get value;
+  bool get explicit;
+  @override
+  @JsonKey(ignore: true)
+  _$$BackScreenResultImplCopyWith<T, _$BackScreenResultImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ErrorScreenResultImplCopyWith<T, $Res>
+    implements $ScreenResultCopyWith<T, $Res> {
+  factory _$$ErrorScreenResultImplCopyWith(_$ErrorScreenResultImpl<T> value,
+          $Res Function(_$ErrorScreenResultImpl<T>) then) =
+      __$$ErrorScreenResultImplCopyWithImpl<T, $Res>;
+  @override
+  @useResult
+  $Res call({Object error, T? value, StackTrace? stackTrace});
+}
+
+/// @nodoc
+class __$$ErrorScreenResultImplCopyWithImpl<T, $Res>
+    extends _$ScreenResultCopyWithImpl<T, $Res, _$ErrorScreenResultImpl<T>>
+    implements _$$ErrorScreenResultImplCopyWith<T, $Res> {
+  __$$ErrorScreenResultImplCopyWithImpl(_$ErrorScreenResultImpl<T> _value,
+      $Res Function(_$ErrorScreenResultImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+    Object? value = freezed,
+    Object? stackTrace = freezed,
+  }) {
+    return _then(_$ErrorScreenResultImpl<T>(
+      error: null == error ? _value.error : error,
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as T?,
+      stackTrace: freezed == stackTrace
+          ? _value.stackTrace
+          : stackTrace // ignore: cast_nullable_to_non_nullable
+              as StackTrace?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ErrorScreenResultImpl<T> implements ErrorScreenResult<T> {
+  const _$ErrorScreenResultImpl(
+      {required this.error, this.value, this.stackTrace});
+
+  @override
+  final Object error;
+  @override
+  final T? value;
+  @override
+  final StackTrace? stackTrace;
+
+  @override
+  String toString() {
+    return 'ScreenResult<$T>.error(error: $error, value: $value, stackTrace: $stackTrace)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ErrorScreenResultImpl<T> &&
+            const DeepCollectionEquality().equals(other.error, error) &&
+            const DeepCollectionEquality().equals(other.value, value) &&
+            (identical(other.stackTrace, stackTrace) ||
+                other.stackTrace == stackTrace));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(error),
+      const DeepCollectionEquality().hash(value),
+      stackTrace);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ErrorScreenResultImplCopyWith<T, _$ErrorScreenResultImpl<T>>
+      get copyWith =>
+          __$$ErrorScreenResultImplCopyWithImpl<T, _$ErrorScreenResultImpl<T>>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(T? value) $default, {
+    required TResult Function(T? value, bool explicit) back,
+    required TResult Function(Object error, T? value, StackTrace? stackTrace)
+        error,
+  }) {
+    return error(this.error, value, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(T? value)? $default, {
+    TResult? Function(T? value, bool explicit)? back,
+    TResult? Function(Object error, T? value, StackTrace? stackTrace)? error,
+  }) {
+    return error?.call(this.error, value, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(T? value)? $default, {
+    TResult Function(T? value, bool explicit)? back,
+    TResult Function(Object error, T? value, StackTrace? stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this.error, value, stackTrace);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(CompletedScreenResult<T> value) $default, {
+    required TResult Function(BackScreenResult<T> value) back,
+    required TResult Function(ErrorScreenResult<T> value) error,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(CompletedScreenResult<T> value)? $default, {
+    TResult? Function(BackScreenResult<T> value)? back,
+    TResult? Function(ErrorScreenResult<T> value)? error,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(CompletedScreenResult<T> value)? $default, {
+    TResult Function(BackScreenResult<T> value)? back,
+    TResult Function(ErrorScreenResult<T> value)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ErrorScreenResult<T>
+    implements ScreenResult<T>, NavigationResult<T>, ErrorNavigationResult<T> {
+  const factory ErrorScreenResult(
+      {required final Object error,
+      final T? value,
+      final StackTrace? stackTrace}) = _$ErrorScreenResultImpl<T>;
+
+  Object get error;
+  @override
+  T? get value;
+  StackTrace? get stackTrace;
+  @override
+  @JsonKey(ignore: true)
+  _$$ErrorScreenResultImplCopyWith<T, _$ErrorScreenResultImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}

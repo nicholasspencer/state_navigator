@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
-class UnauthorizedScreen extends StatelessWidget {
-  const UnauthorizedScreen({required this.onPressed, super.key});
+import '../router.dart';
 
-  final VoidCallback? onPressed;
+class UnauthorizedScreen extends StatelessScreen<void> {
+  const UnauthorizedScreen({
+    required super.onResult,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +21,7 @@ class UnauthorizedScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextButton(
-                onPressed: onPressed,
+                onPressed: () => onResult(const ScreenResult<void>.back()),
                 child: const Text('login'),
               ),
             ],

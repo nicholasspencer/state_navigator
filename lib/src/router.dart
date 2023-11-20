@@ -12,5 +12,7 @@ import 'router/state.dart';
 
 export 'router/state.dart';
 
+part 'router/page.dart';
 part 'router/delegate.dart';
 part 'router/parser.dart';
+part 'router/screen.dart';

@@ -24,13 +24,7 @@ final class RouterDelegate extends w.RouterDelegate<AppStateController>
     final state = currentConfiguration?.call();
     return Navigator(
       key: navigatorKey,
-      onPopPage: (route, result) {
-        if (!route.didPop(result)) {
-          return false;
-        }
-        currentConfiguration?.onLogout();
-        return true;
-      },
+      onPopPage: onPopPage,
       pages: [
         const MaterialPage(
           key: ValueKey(LoadingAppState),
@@ -40,28 +34,28 @@ final class RouterDelegate extends w.RouterDelegate<AppStateController>
           LoadingAppState() || null => null,
           UnauthorizedAppState() || AuthorizedAppState() => () {
               return [
-                MaterialPage(
+                ScreenPage<void>(
                   key: const ValueKey(UnauthorizedAppState),
                   child: UnauthorizedScreen(
-                    onPressed: currentConfiguration?.onLogin,
+                    onResult: (_) => currentConfiguration?.onLogin(),
                   ),
                 ),
                 if (state is AuthorizedAppState) ...[
-                  MaterialPage(
+                  ScreenPage<void>(
                     key: const ValueKey(AuthorizedAppState),
                     child: AuthorizedScreen(
-                      onPressed: currentConfiguration?.onLogout,
+                      onResult: (_) => currentConfiguration?.onLogout(),
                     ),
                   ),
                 ],
               ];
             }(),
           ErrorAppState(error: var error) => [
-              MaterialPage(
+              ScreenPage(
                 key: const ValueKey(ErrorAppState),
                 child: ErrorScreen(
                   error: error,
-                  onPressed: currentConfiguration?.onRetry,
+                  onResult: (_) => currentConfiguration?.onRetry(),
                 ),
               ),
             ],
@@ -71,12 +65,20 @@ final class RouterDelegate extends w.RouterDelegate<AppStateController>
                 child: SplashScreen(),
               ),
             ],
-        }
+        },
       ],
     );
   }
 
   void onAppStateChange(_) => notifyListeners();
+
+  bool onPopPage(Route<dynamic> route, dynamic result) {
+    if (route is ScreenRoute) {
+      route.settings.onPop();
+    }
+
+    return false;
+  }
 
   /// RouterDelegate methods
 
